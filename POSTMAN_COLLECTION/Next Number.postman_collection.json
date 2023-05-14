@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "058621c1-296e-4e38-928f-ae8d263d2d74",
+		"name": "Next Number",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3111290"
+	},
+	"item": [
+		{
+			"name": "Provide Numbers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[1, 2, 3, 4]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/provideNumbers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"provideNumbers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Provide Numbers and Probabilities",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numbers\": [1, 2, 3, 4],\r\n    \"probability\": [50, 15, 150, 25]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/provideNumbersAndProbabilities",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"provideNumbersAndProbabilities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Multiple Numbers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/multipleNumbers?numberOfRequests=100000",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"multipleNumbers"
+					],
+					"query": [
+						{
+							"key": "numberOfRequests",
+							"value": "100000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/singleNumber",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"singleNumber"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
